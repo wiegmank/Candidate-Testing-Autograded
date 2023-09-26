@@ -58,11 +58,19 @@ for (let i = 0; i < candidateAnswers.length; i++) {
 }
 
   let grade = 0;  //TODO 3.2 use this variable to calculate the candidates score.
-
+  let numCorrectAnswers = 0;
   for (let i = 0; i < candidateAnswers.length; i++) {
     if (candidateAnswers[i].toLowerCase() === correctAnswers[i].toLowerCase()) {
-      grade += 20;
+      numCorrectAnswers += 1;
+      grade = ((numCorrectAnswers) / (questions.length)) * 100;
     }
+  }
+
+
+  if (grade >= 80) {
+    console.log(`\nCongratulations, you passed the quiz with a score of ${grade}%. Good job!`);
+  } else {
+    console.log(`\nSorry, your score of ${grade}% is NOT a passing grade.`);
   }
 
   return grade;
