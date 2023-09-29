@@ -49,24 +49,12 @@ function gradeQuiz(candidateAnswers) {
 
   // TODO 1.2c: Let the candidate know if they have answered the question correctly or incorrectly // 
 
-/*
-for (let i = 0; i < candidateAnswers.length; i++) {
-  if (candidateAnswers[i].toLowerCase() === (correctAnswers[i]).toLowerCase()) {
-    console.log(`Your answer to question #${i+1} was ${candidateAnswers[i]} --- CORRECT! The correct answer was ${correctAnswers[i]}.`)
-  } else {
-    console.log(`Your answer to question #${i+1} was ${candidateAnswers[i]} ---  WRONG - the correct answer was ${correctAnswers[i]}.`)
-  }
-}
-*/
+
 //new output
 console.log(`Candidate Name: ${candidateName}`)
 for (let i = 0; i < candidateAnswers.length; i++) {
   console.log(`${i+1}) ${questions[i]}\nYour answer: ${candidateAnswers[i]}\nCorrect Answer: ${correctAnswers[i]}.\n`)
-  //if (candidateAnswers[i].toLowerCase() === (correctAnswers[i]).toLowerCase()) {
-    //console.log(`${i+1}) ${question[i]}\nYour answer: ${candidateAnswers[i]}\nCorrect Answer: ${correctAnswers[i]}.`)
-  //} else {
-  //  console.log(`${i+1}) ${question[i]}\nYour answer: ${candidateAnswers[i]}\nCorrect Answer: ${correctAnswers[i]}.`)
-  //}
+
 }
 
   let grade = 0;  //TODO 3.2 use this variable to calculate the candidates score.
